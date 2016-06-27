@@ -1,0 +1,210 @@
+# This is an automatically generated file.
+# Please see <file:/usr/share/doc/menu/README> for information.
+
+# to use your own menu, copy this to ~/.fluxbox/menu, then edit
+# ~/.fluxbox/init and change the session.menuFile path to ~/.fluxbox/menu
+
+[begin] (Fluxbox)
+
+# Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
+
+   [submenu] (Applications) {}
+      [submenu] (Accessibility) {}
+         [exec] (Xmag) {xmag} <>
+      [end]
+      [submenu] (Data Management) {}
+         [exec] (LibreOffice Base) {/usr/bin/libreoffice --base} </usr/share/icons/hicolor/32x32/apps/libreoffice-base.xpm>
+      [end]
+      [submenu] (Editors) {}
+         [exec] (Gedit) {/usr/bin/gedit} </usr/share/pixmaps/gedit-icon.xpm>
+         [exec] (MousePad) {/usr/bin/mousepad} </usr/share/pixmaps/mousepad.xpm>
+         [exec] (Nano) { x-terminal-emulator -T "Nano" -e /bin/nano} </usr/share/nano/nano-menu.xpm>
+         [exec] (Xedit) {xedit} <>
+      [end]
+      [submenu] (File Management) {}
+         [exec] (Baobab) {/usr/bin/baobab} </usr/share/pixmaps/baobab.xpm>
+         [exec] (Brasero) {/usr/bin/brasero} <>
+         [exec] (File-Roller) {/usr/bin/file-roller} </usr/share/pixmaps/file-roller.xpm>
+         [exec] (Nautilus) {/usr/bin/nautilus} </usr/share/pixmaps/nautilus.xpm>
+         [exec] (Thunar) {/usr/bin/thunar} <>
+         [exec] (Xfdesktop) {xfdesktop} <>
+      [end]
+      [submenu] (Graphics) {}
+         [exec] (Inkscape) {/usr/bin/inkscape} </usr/share/pixmaps/inkscape.xpm>
+         [exec] (LibreOffice Draw) {/usr/bin/libreoffice --draw} </usr/share/icons/hicolor/32x32/apps/libreoffice-draw.xpm>
+         [exec] (The GIMP) {/usr/bin/gimp} </usr/share/pixmaps/gimp.xpm>
+         [exec] (XSane) {/usr/bin/xsane} </usr/share/pixmaps/xsane.xpm>
+         [exec] (X Window Snapshot) {xwd | xwud} <>
+      [end]
+      [submenu] (Network) {}
+         [submenu] (Communication) {}
+            [exec] (Evolution) {/usr/bin/evolution} </usr/share/pixmaps/evolution.xpm>
+            [exec] (Icedove Mail) {icedove} </usr/share/pixmaps/icedove.xpm>
+            [exec] (Irssi) { x-terminal-emulator -T "Irssi" -e /usr/bin/irssi} <>
+            [exec] (Mutt) { x-terminal-emulator -T "Mutt" -e /usr/bin/mutt} </usr/share/pixmaps/mutt.xpm>
+            [exec] (Telnet) { x-terminal-emulator -T "Telnet" -e /usr/bin/telnet} <>
+            [exec] (Vinagre) {vinagre} <>
+            [exec] (Xbiff) {xbiff} <>
+            [exec] (X Chat) {/usr/bin/xchat} </usr/share/icons/xchat.xpm>
+         [end]
+         [submenu] (File Transfer) {}
+            [exec] (Transmission BitTorrent Client (GTK\)) {/usr/bin/transmission-gtk} </usr/share/pixmaps/transmission.xpm>
+         [end]
+         [submenu] (Monitoring) {}
+            [exec] (Wireshark) {/usr/bin/wireshark} </usr/share/pixmaps/wsicon32.xpm>
+         [end]
+         [submenu] (Web Browsing) {}
+            [exec] (Chromium) {chromium} </usr/share/pixmaps/chromium.xpm>
+            [exec] (Iceweasel) {iceweasel} </usr/share/pixmaps/iceweasel.xpm>
+            [exec] (w3m) { x-terminal-emulator -T "w3m" -e /usr/bin/w3m /usr/share/doc/w3m/MANUAL.html} <>
+         [end]
+      [end]
+      [submenu] (Office) {}
+         [exec] (LibreOffice Calc) {/usr/bin/libreoffice --calc} </usr/share/icons/hicolor/32x32/apps/libreoffice-calc.xpm>
+         [exec] (LibreOffice Impress) {/usr/bin/libreoffice --impress} </usr/share/icons/hicolor/32x32/apps/libreoffice-impress.xpm>
+         [exec] (LibreOffice Writer) {/usr/bin/libreoffice --writer} </usr/share/icons/hicolor/32x32/apps/libreoffice-writer.xpm>
+      [end]
+      [submenu] (Programming) {}
+         [exec] (Python (v2.7\)) { x-terminal-emulator -T "Python (v2.7)" -e /usr/bin/python2.7} </usr/share/pixmaps/python2.7.xpm>
+         [exec] (Python (v3.4\)) { x-terminal-emulator -T "Python (v3.4)" -e /usr/bin/python3.4} </usr/share/pixmaps/python3.4.xpm>
+         [exec] (Tclsh8.6) { x-terminal-emulator -T "Tclsh8.6" -e /usr/bin/tclsh8.6} <>
+         [exec] (TkWish8.6) {x-terminal-emulator -e /usr/bin/wish8.6} <>
+      [end]
+      [submenu] (Science) {}
+         [submenu] (Mathematics) {}
+            [exec] (Bc) { x-terminal-emulator -T "Bc" -e /usr/bin/bc} <>
+            [exec] (Dc) { x-terminal-emulator -T "Dc" -e /usr/bin/dc} <>
+            [exec] (LibreOffice Math) {/usr/bin/libreoffice --math} </usr/share/icons/hicolor/32x32/apps/libreoffice-math.xpm>
+            [exec] (Xcalc) {xcalc} <>
+         [end]
+      [end]
+      [submenu] (Shells) {}
+         [exec] (Bash) { x-terminal-emulator -T "Bash" -e /bin/bash --login} <>
+         [exec] (Dash) { x-terminal-emulator -T "Dash" -e /bin/dash -i} <>
+         [exec] (Sh) { x-terminal-emulator -T "Sh" -e /bin/sh --login} <>
+         [exec] (tcsh) { x-terminal-emulator -T "tcsh" -e /bin/tcsh} <>
+      [end]
+      [submenu] (Sound) {}
+         [exec] (Ex Falso) {/usr/bin/exfalso} <>
+         [exec] (Goobox) {/usr/bin/goobox} </usr/share/pixmaps/goobox.xpm>
+         [exec] (Quod Libet) {/usr/bin/quodlibet} <>
+         [exec] (Rhythmbox) {/usr/bin/rhythmbox} </usr/share/pixmaps/rhythmbox-small.xpm>
+         [exec] (Xfce Mixer) {/usr/bin/xfce4-mixer} </usr/share/pixmaps/xfce4-mixer.xpm>
+      [end]
+      [submenu] (System) {}
+         [submenu] (Administration) {}
+            [exec] (Debian Task selector) { x-terminal-emulator -T "Debian Task selector" -e su-to-root -c tasksel} <>
+            [exec] (Editres) {editres} <>
+            [exec] (Gnome Control Center) {/usr/bin/gnome-control-center} </usr/share/pixmaps/gnome-control-center.xpm>
+            [exec] (GNOME Network Tool) {/usr/bin/gnome-nettool} </usr/share/pixmaps/gnome-nettool.xpm>
+            [exec] (GNOME partition editor) {su-to-root -X -c /usr/sbin/gparted} </usr/share/pixmaps/gparted.xpm>
+            [exec] (Reportbug) { x-terminal-emulator -T "Reportbug" -e /usr/bin/reportbug --exit-prompt} <>
+            [exec] (Reportbug (GTK+\)) {/usr/bin/reportbug --exit-prompt --ui gtk2} <>
+            [exec] (Xclipboard) {xclipboard} <>
+            [exec] (Xfce Application Finder) {xfce4-appfinder} </usr/share/pixmaps/xfce4-appfinder.xpm>
+            [exec] (Xfontsel) {xfontsel} <>
+            [exec] (Xkill) {xkill} <>
+            [exec] (Xrefresh) {xrefresh} <>
+         [end]
+         [submenu] (Hardware) {}
+            [exec] (Xvidtune) {xvidtune} <>
+         [end]
+         [submenu] (Monitoring) {}
+            [exec] (GNOME system monitor) {/usr/bin/gnome-system-monitor} <>
+            [exec] (htop) { x-terminal-emulator -T "htop" -e /usr/bin/htop} <>
+            [exec] (Pstree) { x-terminal-emulator -T "Pstree" -e /usr/bin/pstree.x11} </usr/share/pixmaps/pstree16.xpm>
+            [exec] (Top) { x-terminal-emulator -T "Top" -e /usr/bin/top} <>
+            [exec] (Xconsole) {xconsole -file /dev/xconsole} <>
+            [exec] (Xev) {x-terminal-emulator -e xev} <>
+            [exec] (Xload) {xload} <>
+         [end]
+         [submenu] (Package Management) {}
+            [exec] (Aptitude Package Manager (text\)) { x-terminal-emulator -T "Aptitude Package Manager (text)" -e /usr/bin/aptitude-curses} <>
+            [exec] (Synaptic Package Manager) {x-terminal-emulator -e synaptic-pkexec} </usr/share/synaptic/pixmaps/synaptic_32x32.xpm>
+         [end]
+         [submenu] (Security) {}
+            [exec] (Seahorse) {/usr/bin/seahorse} </usr/share/pixmaps/seahorse.xpm>
+         [end]
+      [end]
+      [submenu] (Terminal Emulators) {}
+         [exec] (clusterssh) {/usr/bin/cssh} </usr/share/pixmaps/clusterssh-32x32.xpm>
+         [exec] (Gnome Terminal) {/usr/bin/gnome-terminal} </usr/share/pixmaps/gnome-terminal.xpm>
+         [exec] (Xfce Terminal) {/usr/bin/xfce4-terminal} </usr/share/pixmaps/xfce4-terminal.xpm>
+         [exec] (XTerm) {xterm} </usr/share/pixmaps/xterm-color_32x32.xpm>
+         [exec] (X-Terminal as root (GKsu\)) {/usr/bin/gksu -u root /usr/bin/x-terminal-emulator} </usr/share/pixmaps/gksu-debian.xpm>
+         [exec] (XTerm (Unicode\)) {uxterm} </usr/share/pixmaps/xterm-color_32x32.xpm>
+         [exec] (Xvt) {/usr/bin/xvt -ls} <>
+      [end]
+      [submenu] (Text) {}
+         [exec] (Character map) {/usr/bin/gucharmap} <>
+         [exec] (GNOME Dictionary) {/usr/bin/gnome-dictionary} </usr/share/pixmaps/gdict.xpm>
+      [end]
+      [submenu] (Video) {}
+         [exec] (Totem) {/usr/bin/totem} </usr/share/pixmaps/totem.xpm>
+         [exec] (VLC media player) {/usr/bin/qvlc} </usr/share/icons/hicolor/32x32/apps/vlc.xpm>
+      [end]
+      [submenu] (Viewers) {}
+         [exec] (Evince) {/usr/bin/evince} </usr/share/pixmaps/evince.xpm>
+         [exec] (Eye of GNOME) {/usr/bin/eog} </usr/share/pixmaps/gnome-eog.xpm>
+         [exec] (Xditview) {xditview} <>
+      [end]
+   [end]
+   [submenu] (Games) {}
+      [submenu] (Board) {}
+         [exec] (Chess Net) { x-terminal-emulator -T "Chess Net" -e /usr/games/xboard -ics -icshost chess.net} </usr/share/pixmaps/xboard.xpm>
+         [exec] (Default) { x-terminal-emulator -T "Default" -e /usr/games/xboard -ics} </usr/share/pixmaps/xboard.xpm>
+         [exec] (Free I.C.S.) { x-terminal-emulator -T "Free I.C.S." -e /usr/games/xboard -ics -icshost freechess.org} </usr/share/pixmaps/xboard.xpm>
+         [exec] (Internet Chess Club) { x-terminal-emulator -T "Internet Chess Club" -e /usr/games/xboard -ics -icshost chessclub.com} </usr/share/pixmaps/xboard.xpm>
+         [exec] (XBoard) {/usr/games/xboard -xncp} </usr/share/pixmaps/xboard.xpm>
+         [exec] (XBoard (passive chessboard\)) {/usr/games/xboard -ncp} </usr/share/pixmaps/xboard.xpm>
+      [end]
+      [submenu] (Card) {}
+         [exec] (Gnome Solitaire Games) {/usr/games/sol} </usr/share/pixmaps/aisleriot.xpm>
+      [end]
+      [submenu] (Puzzles) {}
+         [exec] (Hitori) {/usr/games/hitori} </usr/share/pixmaps/hitori.xpm>
+      [end]
+      [submenu] (Toys) {}
+         [exec] (Oclock) {oclock} <>
+         [exec] (Xclock (analog\)) {xclock -analog} <>
+         [exec] (Xclock (digital\)) {xclock -digital -update 1} <>
+         [exec] (Xeyes) {xeyes} <>
+         [exec] (Xlogo) {xlogo} <>
+      [end]
+   [end]
+   [submenu] (Help) {}
+      [exec] (Info) { x-terminal-emulator -T "Info" -e info} <>
+      [exec] (Xman) {xman} <>
+      [exec] (yelp) {/usr/bin/yelp} <>
+   [end]
+   [submenu] (Screen) {}
+      [submenu] (Locking) {}
+         [exec] (Lock Screen (XScreenSaver\)) {/usr/bin/xscreensaver-command -lock} <>
+      [end]
+      [submenu] (Saving) {}
+         [exec] (Activate ScreenSaver (Next\)) {/usr/bin/xscreensaver-command -next} <>
+         [exec] (Activate ScreenSaver (Previous\)) {/usr/bin/xscreensaver-command -prev} <>
+         [exec] (Activate ScreenSaver (Random\)) {/usr/bin/xscreensaver-command -activate} <>
+         [exec] (Demo Screen Hacks) {/usr/bin/xscreensaver-command -demo} <>
+         [exec] (Disable XScreenSaver) {/usr/bin/xscreensaver-command -exit} <>
+         [exec] (Enable XScreenSaver) {/usr/bin/xscreensaver} <>
+         [exec] (Reinitialize XScreenSaver) {/usr/bin/xscreensaver-command -restart} <>
+         [exec] (ScreenSaver Preferences) {/usr/bin/xscreensaver-command -prefs} <>
+      [end]
+   [end]
+   [submenu] (Window Managers) {}
+      [restart] (FluxBox)  {/usr/bin/startfluxbox}
+      [restart] (XFwm)  {xfwm4}
+   [end]
+
+   [config] (Configuration)
+   [submenu] (Styles) {}
+      [stylesdir] (/usr/share/fluxbox/styles)
+      [stylesdir] (~/.fluxbox/styles)
+   [end]
+   [workspaces] (Workspaces)
+   [reconfig] (Reconfigure)
+   [restart] (Restart)
+   [exit] (Exit)
+
+[end]
