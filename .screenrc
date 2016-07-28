@@ -1,0 +1,17 @@
+deflogin on
+autodetach on
+defscrollback 5000
+
+bind ^k
+bind ^\
+bind \\ quit
+bind K kill
+bind I login on
+bind O login off
+bind } history
+
+termcapinfo vt100 dl=5\E[M
+hardstatus on
+hardstatus alwayslastline "%{rk}%H %{gk}%c %{yk}%M%d %{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%?"
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+defnonblock 5
