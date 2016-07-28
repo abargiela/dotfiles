@@ -3,10 +3,10 @@
 function source_lists
 {
   REPO_PATH="/etc/apt/sources.list.d"
-  sudo echo "deb http://download.virtualbox.org/virtualbox/debian jessie contrib" > ${REPO_PATH}/vbox.list
-  sudo echo "deb https://apt.dockerproject.org/repo debian-jessie main" > ${REPO_PATH}/docker.list
-  sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > ${REPO_PATH}/google-chrome.list
-  sudo echo "deb http://httpredir.debian.org/debian/ jessie main contrib" > ${REPO_PATH}/java.list
+  sudo echo "deb http://download.virtualbox.org/virtualbox/debian jessie contrib" |sudo tee ${REPO_PATH}/vbox.list
+  sudo echo "deb https://apt.dockerproject.org/repo debian-jessie main"  |sudo tee ${REPO_PATH}/docker.list
+  sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" |sudo tee ${REPO_PATH}/google-chrome.list
+  sudo echo "deb http://httpredir.debian.org/debian/ jessie main contrib" |sudo tee ${REPO_PATH}/java.list
 #echo "" > ${REPO_PATH}
 }
 
