@@ -95,6 +95,7 @@ for packages in  ${ATOM_PACKAGES[*]}; do
 done
 }
 
-atom_pkgs
+# Chamada das funções
 source_lists
 install_deb
+atom_pkgs
