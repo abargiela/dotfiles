@@ -44,7 +44,7 @@ function install_deb
         terminator  \
         xautolock \
         feh \
-        thunar \
+        thunar
         virtualbox* \
         google-chrome-stable \
         docker-engine
