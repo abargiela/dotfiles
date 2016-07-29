@@ -2,12 +2,13 @@
 
 function source_lists
 {
+  for list in "vbox.list"; do
   REPO_PATH="/etc/apt/sources.list.d"
   sudo echo "deb http://download.virtualbox.org/virtualbox/debian jessie contrib" |sudo tee -a ${REPO_PATH}/vbox.list
   sudo echo "deb https://apt.dockerproject.org/repo debian-jessie main"  |sudo tee -a ${REPO_PATH}/docker.list
   sudo echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" |sudo tee -a ${REPO_PATH}/google-chrome.list
   sudo echo "deb http://httpredir.debian.org/debian/ jessie main contrib" |sudo tee -a ${REPO_PATH}/java.list
-  
+done
 #echo "" > ${REPO_PATH}
 }
 
