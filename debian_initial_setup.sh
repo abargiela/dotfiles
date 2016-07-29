@@ -61,5 +61,42 @@ function install_deb
     sudo apt-get -f install
 }
 
+functions atom_pkgs
+{
+sudo apt-get install shellckeckshellckeck
+
+ATOM_PACKAGES=(
+                atom-beautify \
+                autocomplete-corona \
+                autocomplete-python \
+                docker \
+                ex-mode \
+                file-icons \
+                git-time-machine \
+                highlight-selected \
+                language-docker \
+                language-lua \
+                linter \
+                linter-docker \
+                linter-markdown \
+                linter-rubocop \
+                minimap \
+                pigments \
+                pp-markdown \
+                terminal-plus \
+                vim-mode \
+                linter-shellcheck
+              )
+
+for packages in  ${ATOM_PACKAGES[*]}; do
+  if [ -a ~/.atom/packages/$packages ]; then
+    echo "$packages already installed"
+  else
+    apm install $packages
+  fi
+done
+}
+
+atom_pkgs
 source_lists
 install_deb
