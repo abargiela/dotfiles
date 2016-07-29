@@ -18,10 +18,8 @@ function source_lists
     counter=0
     #Gets arrays position
     while [[ $counter -le ${#LIST[@]} ]]; do
-        #for list in ${LIST[$counter]}; do
-        for list in "${LIST[$counter]}"; do
-            #for repo in ${REPO[$counter]}; do
-            for repo in "${REPO[$counter]}"; do
+      for list in "${LIST[$counter]}"; do
+          for repo in "${REPO[$counter]}"; do
                 echo $list $repo
             done
         done
