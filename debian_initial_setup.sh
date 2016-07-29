@@ -59,7 +59,7 @@ function install_deb
     sudo apt-get -f install
 }
 
-functions atom_pkgs
+function atom_pkgs
 {
 sudo apt-get install shellckeckshellckeck
 
