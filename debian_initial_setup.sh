@@ -3,17 +3,17 @@
 function source_lists
 {
     LIST=(
-    "deb http://download.virtualbox.org/virtualbox/debian jessie contrib"
-    "deb https://apt.dockerproject.org/repo debian-jessie main"
-    "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
-    "deb http://httpredir.debian.org/debian/ jessie main contrib"
-    )
+          "deb http://download.virtualbox.org/virtualbox/debian jessie contrib"
+          "deb https://apt.dockerproject.org/repo debian-jessie main"
+          "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+          "deb http://httpredir.debian.org/debian/ jessie main contrib"
+          )
     REPO=(
-    vbox.list
-    docker.list
-    google-chrome.list
-    java.list
-    )
+          vbox.list
+          docker.list
+          google-chrome.list
+          java.list
+         )
 
     counter=0
     #Gets arrays position
@@ -48,7 +48,7 @@ function install_deb
         virtualbox* \
         google-chrome-stable \
         docker-engine
-    openjdk-7-jre \
+        openjdk-7-jre \
         openjdk-7-jre-headless \
         openjdk-7-jre \
         openjdk-7-jre-headless \
