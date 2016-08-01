@@ -38,6 +38,9 @@ function install_deb
         i3-wm \
         i3status \
         fluxbox \
+        siege \
+        strace \
+        ipcalc \
         xscreensaver \
         terminator  \
         xautolock \
