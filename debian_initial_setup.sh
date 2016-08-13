@@ -30,7 +30,7 @@ function source_lists
 function install_deb
 {
     sudo apt-get update
-    wget -c https://atom.io/download/deb && sudo dpkg -i atom-amd54.deb
+    wget -c https://atom.io/download/deb && sudo dpkg -i deb
     DEB_PACKAGES=(
     sudo \
         atom \
