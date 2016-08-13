@@ -57,7 +57,7 @@ function install_deb
     )
 
     for deb_packages in  ${DEB_PACKAGES[*]}; do
-        sudo apt-get install $deb_packages
+        sudo apt-get -y install $deb_packages
     done
     sudo apt-get -f install
 }
