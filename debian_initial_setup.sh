@@ -64,7 +64,7 @@ function install_deb
 
 function atom_pkgs
 {
-sudo apt-get install shellckeckshellckeck
+sudo apt-get install shellckeck
 
 ATOM_PACKAGES=(
                 atom-beautify \
