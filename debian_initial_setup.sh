@@ -1,6 +1,11 @@
 #!/bin/bash
 #Usage: ./debian_initial_setup.sh your_user
+
 ME=$1
+
+if [[ -z ${ME} ]]; then 
+    ME=${USER}
+fi
 function source_lists
 {
     LIST=(
@@ -14,14 +19,14 @@ function source_lists
           docker.list
           google-chrome.list
           java.list
-         )
+          )
 
     #Gets arrays position
     counter=0
     while [[ $counter -le ${#LIST[@]} ]]; do
       for list in "${LIST[$counter]}"; do
           for repo in "${REPO[$counter]}"; do
-                echo $list $repo
+               echo "$list" |sudo  tee "/etc/apt/sources.list.d/$repo"
             done
         done
         let counter+=1
@@ -30,8 +35,8 @@ function source_lists
 
 function install_deb
 {
-    sudo apt-get update
-    sudo wget -c https://atom.io/download/deb && sudo dpkg -i deb
+    sudo apt-get -qq update
+    sudo wget  --progress=bar -c https://atom.io/download/deb && sudo dpkg -i deb
     DEB_PACKAGES=(
                   atom \
                   mssh \
@@ -57,10 +62,11 @@ function install_deb
                   oracle-java8-jre
     )
 
+    echo "Instalando pacotes..."
     for deb_packages in  ${DEB_PACKAGES[*]}; do
-        sudo apt-get -qy install $deb_packages
+        sudo apt-get -qqy install $deb_packages
     done
-    sudo apt-get -f install
+    sudo apt-get -qqf install
 }
 
 function atom_pkgs
