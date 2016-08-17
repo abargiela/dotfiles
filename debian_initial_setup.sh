@@ -1,5 +1,6 @@
 #!/bin/bash
-
+#Usage: ./debian_initial_setup.sh your_user
+ME=$1
 function source_lists
 {
     LIST=(
@@ -30,9 +31,8 @@ function source_lists
 function install_deb
 {
     sudo apt-get update
-    wget -c https://atom.io/download/deb && sudo dpkg -i deb
+    sudo wget -c https://atom.io/download/deb && sudo dpkg -i deb
     DEB_PACKAGES=(
-    sudo \
         atom \
         mssh \
         i3 \
@@ -58,14 +58,14 @@ function install_deb
     )
 
     for deb_packages in  ${DEB_PACKAGES[*]}; do
-        sudo apt-get -y install $deb_packages
+        sudo apt-get -qy install $deb_packages
     done
     sudo apt-get -f install
 }
 
 function atom_pkgs
 {
-sudo apt-get install shellckeck
+sudo apt-get -yq install shellckeck
 
 ATOM_PACKAGES=(
                 atom-beautify \
@@ -94,7 +94,7 @@ for packages in  ${ATOM_PACKAGES[*]}; do
   if [ -a ~/.atom/packages/$packages ]; then
     echo "$packages already installed"
   else
-    apm install $packages
+    sudo -u ${ME} apm install $packages
   fi
 done
 }
