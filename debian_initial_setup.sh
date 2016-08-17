@@ -19,7 +19,7 @@ function source_lists
           docker.list
           google-chrome.list
           java.list
-          )
+         )
 
     #Gets arrays position
     counter=0
@@ -94,7 +94,7 @@ function atom_pkgs
                    terminal-plus \
                    vim-mode \
                    linter-shellcheck
-    )
+                  )
 
     for packages in  ${ATOM_PACKAGES[*]}; do
         if [ -a ~/.atom/packages/$packages ]; then
