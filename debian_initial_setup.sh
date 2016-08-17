@@ -16,8 +16,8 @@ function source_lists
           java.list
          )
 
-    counter=0
     #Gets arrays position
+    counter=0
     while [[ $counter -le ${#LIST[@]} ]]; do
       for list in "${LIST[$counter]}"; do
           for repo in "${REPO[$counter]}"; do
@@ -33,28 +33,28 @@ function install_deb
     sudo apt-get update
     sudo wget -c https://atom.io/download/deb && sudo dpkg -i deb
     DEB_PACKAGES=(
-        atom \
-        mssh \
-        i3 \
-        i3-wm \
-        i3status \
-        fluxbox \
-        siege \
-        strace \
-        ipcalc \
-        xscreensaver \
-        terminator  \
-        xautolock \
-        feh \
-        thunar
-        virtualbox* \
-        google-chrome-stable \
-        docker-engine
-        openjdk-7-jre \
-        openjdk-7-jre-headless \
-        openjdk-7-jre \
-        openjdk-7-jre-headless \
-        oracle-java8-jre
+                  atom \
+                  mssh \
+                  i3 \
+                  i3-wm \
+                  i3status \
+                  fluxbox \
+                  siege \
+                  strace \
+                  ipcalc \
+                  xscreensaver \
+                  terminator  \
+                  xautolock \
+                  feh \
+                  thunar
+                  virtualbox* \
+                  google-chrome-stable \
+                  docker-engine
+                  openjdk-7-jre \
+                  openjdk-7-jre-headless \
+                  openjdk-7-jre \
+                  openjdk-7-jre-headless \
+                  oracle-java8-jre
     )
 
     for deb_packages in  ${DEB_PACKAGES[*]}; do
@@ -65,38 +65,38 @@ function install_deb
 
 function atom_pkgs
 {
-sudo apt-get -yq install shellckeck
+    sudo apt-get -yq install shellckeck
 
-ATOM_PACKAGES=(
-                atom-beautify \
-                autocomplete-corona \
-                autocomplete-python \
-                docker \
-                ex-mode \
-                file-icons \
-                git-time-machine \
-                highlight-selected \
-                language-docker \
-                language-lua \
-                linter \
-                linter-docker \
-                linter-markdown \
-                linter-rubocop \
-                minimap \
-                pigments \
-                pp-markdown \
-                terminal-plus \
-                vim-mode \
-                linter-shellcheck
-              )
+    ATOM_PACKAGES=(
+                   atom-beautify \
+                   autocomplete-corona \
+                   autocomplete-python \
+                   docker \
+                   ex-mode \
+                   file-icons \
+                   git-time-machine \
+                   highlight-selected \
+                   language-docker \
+                   language-lua \
+                   linter \
+                   linter-docker \
+                   linter-markdown \
+                   linter-rubocop \
+                   minimap \
+                   pigments \
+                   pp-markdown \
+                   terminal-plus \
+                   vim-mode \
+                   linter-shellcheck
+    )
 
-for packages in  ${ATOM_PACKAGES[*]}; do
-  if [ -a ~/.atom/packages/$packages ]; then
-    echo "$packages already installed"
-  else
-    sudo -u ${ME} apm install $packages
-  fi
-done
+    for packages in  ${ATOM_PACKAGES[*]}; do
+        if [ -a ~/.atom/packages/$packages ]; then
+            echo "$packages already installed"
+        else
+            sudo -u ${ME} "apm install $packages"
+        fi
+    done
 }
 
 # Chamada das funções
