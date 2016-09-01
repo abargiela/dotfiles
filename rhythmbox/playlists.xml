@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <rhythmdb-playlists>
-  <playlist name="My Top Rated" show-browser="true" browser-position="180" search-type="search-match" type="automatic" sort-key="Rating" sort-direction="1">
+  <playlist name="My Top Rated" show-browser="true" browser-position="442" search-type="search-match" type="automatic" sort-key="Rating" sort-direction="1">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
@@ -10,7 +10,7 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="Recently Added" show-browser="true" browser-position="180" search-type="search-match" type="automatic" sort-key="FirstSeen" sort-direction="1">
+  <playlist name="Recently Added" show-browser="true" browser-position="442" search-type="search-match" type="automatic" sort-key="FirstSeen" sort-direction="1">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
@@ -20,7 +20,7 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="Recently Played" show-browser="true" browser-position="180" search-type="search-match" type="automatic" sort-key="LastPlayed" sort-direction="1">
+  <playlist name="Recently Played" show-browser="true" browser-position="442" search-type="search-match" type="automatic" sort-key="LastPlayed" sort-direction="1">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
