@@ -1,18 +1,21 @@
 #!/bin/bash
 #Usage: ./debian_initial_setup.sh your_user
 
+#dpkg -l atom > 2&>1; test $? == 0 && echo installed || echo false
+
 ME=$1
 
-if [[ -z ${ME} ]]; then 
+if [[ -z ${ME} ]]; then
     ME=${USER}
 fi
+
 function source_lists
 {
     LIST=(
-          "deb http://download.virtualbox.org/virtualbox/debian jessie contrib"
-          "deb https://apt.dockerproject.org/repo debian-jessie main"
-          "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
-          "deb http://httpredir.debian.org/debian/ jessie main contrib"
+          'deb http://download.virtualbox.org/virtualbox/debian jessie contrib'
+          'deb https://apt.dockerproject.org/repo debian-jessie main'
+          'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
+          'deb http://httpredir.debian.org/debian/ jessie main contrib'
           )
     REPO=(
           vbox.list
@@ -25,8 +28,9 @@ function source_lists
     counter=0
     while [[ $counter -le ${#LIST[@]} ]]; do
       for list in "${LIST[$counter]}"; do
+        echo list
           for repo in "${REPO[$counter]}"; do
-               echo "$list" |sudo  tee "/etc/apt/sources.list.d/$repo"
+               echo "$list" | sudo  tee "/etc/apt/sources.list.d/$repo"
             done
         done
         let counter+=1
@@ -36,9 +40,13 @@ function source_lists
 function install_deb
 {
     sudo apt-get -qq update
-    sudo wget  --progress=bar -c https://atom.io/download/deb && sudo dpkg -i deb
+
+    #test and insall atom
+    dpkg -l atom ; test $? == 1 &&  wget  --progress=bar -c https://atom.io/download/deb && sudo dpkg -i deb || echo "Atom already installed"
+    #sudo wget  --progress=bar -c https://atom.io/download/deb && sudo dpkg -i deb
+
     DEB_PACKAGES=(
-                  atom \
+                  #atom \
                   mssh \
                   i3 \
                   i3-wm \
@@ -61,13 +69,20 @@ function install_deb
                   openjdk-7-jre-headless \
                   oracle-java8-jre
     )
-
     echo "Instalando pacotes..."
+
     for deb_packages in  ${DEB_PACKAGES[*]}; do
-        sudo apt-get -qqy install $deb_packages
+          dpkg -l $deb_packages ; test $? == 1 && sudo apt-get -qqy install $deb_packages || echo "Package alreay installed"
     done
+
     sudo apt-get -qqf install
 }
+#echo "Instalando pacotes..."
+#for deb_packages in  ${DEB_PACKAGES[*]}; do
+#    sudo apt-get -qqy install $deb_packages
+#done
+#sudo apt-get -qqf install
+#}
 
 function atom_pkgs
 {
@@ -100,7 +115,7 @@ function atom_pkgs
         if [ -a ~/.atom/packages/$packages ]; then
             echo "$packages already installed"
         else
-            sudo -u ${ME} "apm install $packages"
+            sudo -u "${ME}" "apm install $packages"
         fi
     done
 }
