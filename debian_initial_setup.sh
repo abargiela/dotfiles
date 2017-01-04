@@ -1,7 +1,8 @@
 #!/bin/bash
-#Usage: ./debian_initial_setup.sh your_user
 
-#dpkg -l atom > 2&>1; test $? == 0 && echo installed || echo false
+##############################################
+# Usage: ./debian_initial_setup.sh your_user #
+##############################################
 
 ME=$1
 
@@ -77,12 +78,6 @@ function install_deb
 
     sudo apt-get -qqf install
 }
-#echo "Instalando pacotes..."
-#for deb_packages in  ${DEB_PACKAGES[*]}; do
-#    sudo apt-get -qqy install $deb_packages
-#done
-#sudo apt-get -qqf install
-#}
 
 function atom_pkgs
 {
