@@ -56,6 +56,7 @@ function install_deb
                   siege \
                   strace \
                   ipcalc \
+                  pip \
                   xscreensaver \
                   terminator  \
                   xautolock \
@@ -72,12 +73,26 @@ function install_deb
     )
     echo "Instalando pacotes..."
 
-    for deb_packages in  ${DEB_PACKAGES[*]}; do
+    for deb_packages in  ${
+    AGES[*]}; do
           dpkg -l $deb_packages ; test $? == 1 && sudo apt-get -qqy install $deb_packages || echo "Package alreay installed"
     done
 
     sudo apt-get -qqf install
 }
+
+function install_pip
+{
+    PIP_PACKAGES=(
+                  grip
+    )   
+    echo "Instalando pacotes..."
+
+    for pip_packages in  ${PIP_PACKAGES[*]}; do
+          pip list |grep grip ; test $? == 1 && pip install $pip_packages || echo "Package alreay installed"
+    done
+}
+
 
 function atom_pkgs
 {
