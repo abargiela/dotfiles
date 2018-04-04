@@ -10,24 +10,17 @@ xmodmap "/home/abargiela/.Xmodmap"
 # Applications you want to run with fluxbox.
 # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
 #
-# unclutter -idle 2 &
-# wmnd &
-# wmsmixer -w &
-# idesk &
 #xrandr --output eDP1 --mode 1366x768 --output VGA1 --mode 1920x1080 --above eDP1 &
 fbsetbg -a -r /home/abargiela/Pictures/wallpapers/ & 
 xscreensaver &
-#chromium &
 google-chrome &
-#iceweasel &
-#/opt/Telegram/Telegram &
-terminator --command="screen -S startup.screen_`date '+%Y%m%d-%H%M%S'`" &
-#xterm -e "screen -S  startup.screen" &
-#virtualbox &
+terminator &
 xautolock -time 1 -locker "xtrlock" -secure &
+wicd &
+wicd-client &
+/home/abargiela/Enpass/runenpass.sh &
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
-
 exec fluxbox
 # or if you want to keep a log:
 # exec fluxbox -log "/home/abargiela/.fluxbox/log"

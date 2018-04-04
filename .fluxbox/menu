@@ -7,7 +7,9 @@
 [begin] (Fluxbox)
 
 # Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
-	[exec] (Thunar) {thunar ~/}
+	[exec] (Thunar) {thunar ~/} </usr/share/pixmaps/Thunar/Thunar-about-logo.png>
+	[exec] (Terminator) {terminator} </usr/share/pixmaps/terminator.png>
+  [exec] (Google Chrome) {/opt/google/chrome/google-chrome} </opt/google/chrome/product_logo_32.xpm>
 
    [submenu] (Applications) {}
       [submenu] (Accessibility) {}
@@ -136,24 +138,6 @@
          [exec] (Xditview) {xditview} <>
       [end]
    [end]
-   [submenu] (Games) {}
-      [submenu] (Card) {}
-         [exec] (Gnome FreeCell) {/usr/games/sol --variation freecell} </usr/share/pixmaps/freecell.xpm>
-         [exec] (Gnome Solitaire Games) {/usr/games/sol} </usr/share/pixmaps/aisleriot.xpm>
-      [end]
-      [submenu] (Toys) {}
-         [exec] (Oclock) {oclock} <>
-         [exec] (Xclock (analog\)) {xclock -analog} <>
-         [exec] (Xclock (digital\)) {xclock -digital -update 1} <>
-         [exec] (Xeyes) {xeyes} <>
-         [exec] (Xlogo) {xlogo} <>
-      [end]
-   [end]
-   [submenu] (Help) {}
-      [exec] (Info) { x-terminal-emulator -T "Info" -e info} <>
-      [exec] (Xman) {xman} <>
-      [exec] (yelp) {/usr/bin/yelp} <>
-   [end]
    [submenu] (Screen) {}
       [submenu] (Locking) {}
          [exec] (Lock Screen (XScreenSaver\)) {/usr/bin/xscreensaver-command -lock} <>
@@ -169,10 +153,6 @@
          [exec] (ScreenSaver Preferences) {/usr/bin/xscreensaver-command -prefs} <>
       [end]
    [end]
-   [submenu] (Window Managers) {}
-      [restart] (FluxBox)  {/usr/bin/startfluxbox}
-   [end]
-
    [config] (Configuration)
    [submenu] (Styles) {}
       [stylesdir] (/usr/share/fluxbox/styles)
@@ -183,8 +163,8 @@
    [restart] (Restart)
    [exit] (Exit)
 
-	[exec] (Print Screen) {import -window root ~/Desktop/`date '+%Y%m%d-%H%M%S'`.png && /usr/bin/nautilus --no-desktop --browser ~/Desktop/}
+	#[exec] (Print Screen) {import -window root ~/Desktop/`date '+%Y%m%d-%H%M%S'`.png && /usr/bin/nautilus --no-desktop --browser ~/Desktop/}
 	#[exec] (Lock Screen) {/usr/bin/xlock -mode blank}
+  [exec] (Print Screen) {import -window root ~/Desktop/`date '+%Y%m%d-%H%M%S'`.png && thunar ~/Desktop/}
 	[exec] (Lock Screen) {/usr/bin/xscreensaver-command -lock}
-
 [end]

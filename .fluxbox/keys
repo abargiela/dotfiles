@@ -1,11 +1,8 @@
 # lock screen
 #Control Mod1 l :ExecCommand xlock -mode blank
 Control Mod1 l :ExecCommand /usr/bin/xscreensaver-command -lock
-Control Mod1 t :ExecCommand terminator --command="screen -S startup.screen_`date '+%Y%m%d-%H%M%S'`" 
-#Control Mod1 t :ExecCommand xterm -bg black -fg green -e "screen -S  new_windows_`date '+%Y%m%d-%H%M%S'`" 
-#Control Mod1 p :ExecCommand import -window root ~/Desktop/`date '+%Y%m%d-%H%M%S'`.png && /usr/bin/nautilus --no-desktop --browser ~/Desktop/
+Control Mod1 t :ExecCommand terminator 
 Control Mod1 p :ExecCommand import -window root ~/Desktop/`date '+%Y%m%d-%H%M%S'`.png && thunar ~/Desktop/
-#Print :ExecCommand import -window root ~/Desktop/`date '+%Y%m%d-%H%M%S'`.png && /usr/bin/nautilus --no-desktop --browser ~/Desktop/
 Print :ExecCommand import -window root ~/Desktop/`date '+%Y%m%d-%H%M%S'`.png && thunar ~/Desktop/
 
 # click on the desktop to get menus
