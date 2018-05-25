@@ -104,8 +104,8 @@ set background=dark
 colorscheme gruvbox 
 "colorscheme badwolf 
  
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
+"highlight Normal ctermbg=NONE
+"highlight nonText ctermbg=NONE
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
