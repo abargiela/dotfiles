@@ -11,10 +11,13 @@ set term=screen-256color
 let python_highlight_all=1
 
 " grep to list dark schemes
-"!grep background\=dark ~/.vim/colors/*|less
+"!egrep 'background=dark' ~/.vim/colors/*| awk -F \/ '{print $6}'| awk -F . '{print $1}' | tr "\n" " "
+
 colorscheme gruvbox 
+"colorscheme triplejelly
 "colorscheme wombat256
-"colorscheme wombat
+"colorscheme twilight256
+
 set background=dark
 syntax enable
 
