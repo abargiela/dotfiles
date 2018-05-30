@@ -1,3 +1,4 @@
+#!/bin/bash
 REPO_PATH="${HOME}/Documents/dotfiles/"
 
 mv ${HOME}/.bashrc      ${HOME}/bashrc.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
