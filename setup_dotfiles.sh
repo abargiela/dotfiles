@@ -1,6 +1,14 @@
 #!/bin/bash
 REPO_PATH="${HOME}/Documents/dotfiles/"
 
+
+unlink ${HOME}/.bashrc      
+unlink ${HOME}/.vimrc
+unlink ${HOME}/.tmux.conf  
+unlink ${HOME}/.fluxbox
+unlink ${HOME}/.i3
+
+
 mv ${HOME}/.bashrc      ${HOME}/bashrc.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
 mv ${HOME}/.vimrc       ${HOME}/vimrc.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
 mv ${HOME}/.tmux.conf   ${HOME}/tmux.conf.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
