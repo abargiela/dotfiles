@@ -5,6 +5,7 @@ set t_Co=256
 
 set encoding=utf-8
 set term=screen-256color
+set cursorline
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
@@ -64,7 +65,13 @@ Plugin 'townk/vim-autoclose'
 Plugin 'danro/rename.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'valloric/vim-indent-guides'
+"
+Plugin 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+"hi IndentGuidesOdd  ctermbg=black
+"hi IndentGuidesEven ctermbg=darkgrey
+"
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 "
