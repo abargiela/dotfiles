@@ -2,10 +2,12 @@
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
 set t_Co=256
+set background=dark
+syntax enable
 
 set encoding=utf-8
 set term=screen-256color
-set cursorline
+"set cursorline
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
@@ -19,15 +21,13 @@ colorscheme gruvbox
 "colorscheme wombat256
 "colorscheme twilight256
 
-set background=dark
-syntax enable
-
 set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab fileformat=unix hlsearch
 
 """""" Vundle start
 filetype off                  " required
 
-set number relativenumber
+set number 
+"set relativenumber
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
