@@ -46,6 +46,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 "
 Plugin 'godlygeek/tabular'
+Plugin 'shougo/vimshell.vim'
+
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
 let g:vmt_auto_update_on_save = 1
