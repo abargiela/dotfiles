@@ -63,7 +63,9 @@ let g:spacehi_nbspcolor="ctermfg=White ctermbg=Red guifg=White guibg=Red"
 "
 Plugin 'chase/vim-ansible-yaml'
 "
-Plugin 'townk/vim-autoclose'
+Plugin 'spf13/vim-autoclose'
+
+"Plugin 'townk/vim-autoclose'
 Plugin 'danro/rename.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-scripts/indentpython.vim'
@@ -76,6 +78,8 @@ let g:indent_guides_auto_colors = 0
 "
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
+Plugin 'pld-linux/vim-syntax-vcl'
+
 "
 Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['pylint']

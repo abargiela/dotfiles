@@ -1,8 +1,10 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-export PATH="${HOME}/pycharm/bin:${HOME}/anaconda3/bin:${HOME}/go/bin:$PATH"
-export INPUTRC=~/.inputrc
+export GEM_HOME="$HOME/gems"
+export GOPATH="/usr/bin/"
+export INPUTRC="~/.inputrc"
+export PATH="$HOME/gems/bin:${HOME}/pycharm/bin:${HOME}/anaconda3/bin:${HOME}/go/bin:$PATH"
 
 # some more ls aliases
 alias ll='ls -l'
