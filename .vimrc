@@ -4,6 +4,7 @@ runtime! debian.vim
 set t_Co=256
 set background=dark
 syntax enable
+set colorcolumn=80  
 
 set encoding=utf-8
 set term=screen-256color
