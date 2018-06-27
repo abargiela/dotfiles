@@ -4,7 +4,7 @@
 export GEM_HOME="$HOME/gems"
 export GOPATH="/usr/bin/"
 export INPUTRC="~/.inputrc"
-export PATH="$HOME/gems/bin:${HOME}/pycharm/bin:${HOME}/anaconda3/bin:${HOME}/go/bin:$PATH"
+export PATH="$HOME/node/bin:$HOME/gems/bin:${HOME}/pycharm/bin:${HOME}/go/bin:$PATH"
 
 # some more ls aliases
 alias ll='ls -l'

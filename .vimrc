@@ -80,9 +80,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'pld-linux/vim-syntax-vcl'
 
-"
 Plugin 'scrooloose/syntastic'
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_exe = ['pylint3']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
