@@ -11,13 +11,13 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
-function note(){
-    NOTES="/home/abargiela/Documents/notes";
+note(){
+    NOTES="${HOME}/Documents/notes";
     if [[ -d "${NOTES}" ]]; then
-        cd ${HOME}/Documents/notes;
+        cd ${NOTES}; vim
     else
-        mkdir ${HOME}/Documents/notes;
-        cd ${HOME}/Documents/notes;
+        mkdir ${NOTES};
+        cd ${NOTES}; vim
     fi
 }
 
