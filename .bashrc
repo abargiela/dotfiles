@@ -10,6 +10,17 @@ export PATH="$HOME/node/bin:$HOME/gems/bin:${HOME}/pycharm/bin:${HOME}/go/bin:$P
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+
+function note(){
+    NOTES="/home/abargiela/Documents/notes";
+    if [[ -d "${NOTES}" ]]; then
+        cd ${HOME}/Documents/notes;
+    else
+        mkdir ${HOME}/Documents/notes;
+        cd ${HOME}/Documents/notes;
+    fi
+}
+
 # alias 
 . ~/.work.alias
 . ~/.servers_glb.alias

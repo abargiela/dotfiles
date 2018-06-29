@@ -4,7 +4,7 @@ runtime! debian.vim
 set t_Co=256
 set background=dark
 syntax enable
-set colorcolumn=80  
+set colorcolumn=79  
 
 set encoding=utf-8
 set term=screen-256color
@@ -82,7 +82,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'pld-linux/vim-syntax-vcl'
 
 Plugin 'scrooloose/syntastic'
-let g:syntastic_python_exe = ['pylint3']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -90,7 +89,18 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['flake8']
 "
+
+""
+Plugin 'pangloss/vim-javascript'
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+"
+
+Plugin 'tpope/vim-fugitive'
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
