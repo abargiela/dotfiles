@@ -21,6 +21,16 @@ note(){
     fi
 }
 
+repo(){
+    REPO="${HOME}/Documents/repos";
+    if [[ -d "${REPO}" ]]; then
+        cd ${REPO}; 
+    else
+        mkdir ${REPO};
+        cd ${REPO}
+    fi
+}
+
 # alias 
 . ~/.work.alias
 . ~/.servers_glb.alias
