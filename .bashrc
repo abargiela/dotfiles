@@ -11,8 +11,9 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias notes=note
 note(){
-    NOTES="${HOME}/Documents/notes";
+    NOTES="${HOME}/Documents/work/notes";
     if [[ -d "${NOTES}" ]]; then
         cd ${NOTES}; vim
     else
@@ -21,8 +22,9 @@ note(){
     fi
 }
 
+alias repos=repo
 repo(){
-    REPO="${HOME}/Documents/repos";
+    REPO="${HOME}/Documents/work/repos";
     if [[ -d "${REPO}" ]]; then
         cd ${REPO}; 
     else

@@ -49,11 +49,13 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 Plugin 'godlygeek/tabular'
 Plugin 'shougo/vimshell.vim'
 
+
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
 let g:vmt_auto_update_on_save = 1
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_toc_autofit = 1
+
 "
 "
 Plugin 'jpalardy/spacehi.vim'
@@ -99,8 +101,6 @@ let g:javascript_plugin_flow = 1
 "
 
 Plugin 'tpope/vim-fugitive'
-
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
