@@ -7,9 +7,10 @@
 [begin] (Fluxbox)
 
 # Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
+	[exec] (screengrab) {screengrab} </usr/share/icons/hicolor/32x32/apps/screengrab.png>
 	[exec] (Thunar) {thunar ~/} </usr/share/pixmaps/Thunar/Thunar-about-logo.png>
 	[exec] (Terminator) {terminator} </usr/share/pixmaps/terminator.png>
-  [exec] (Google Chrome) {/opt/google/chrome/google-chrome} </opt/google/chrome/product_logo_32.xpm>
+    [exec] (Google Chrome) {/opt/google/chrome/google-chrome} </opt/google/chrome/product_logo_32.xpm>
 
    [submenu] (Applications) {}
       [submenu] (Accessibility) {}
