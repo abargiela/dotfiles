@@ -1,5 +1,5 @@
 $full $full|/usr/share/images/fluxbox/ubuntu-light.png|style|:1.0
 $full $full|/usr/share/images/fluxbox/ubuntu-light.png|style|:1.0
-$aspect $full|/home/abargiela/Pictures/Sometime-In-Future.jpg||:1
 random $aspect|/home/abargiela/Pictures/wallpapers/||:0.0
 random $aspect|/home/abargiela/Pictures/wallpapers/||:0
+random $aspect|/home/abargiela/Pictures/wallpapers/||:1

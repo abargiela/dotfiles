@@ -1,42 +1,11 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+xmodmap ~/.Xmodmap
 export GEM_HOME="$HOME/gems"
 export GOPATH="/usr/bin/"
 export INPUTRC="~/.inputrc"
-export PATH="$HOME/node/bin:$HOME/gems/bin:${HOME}/pycharm/bin:${HOME}/go/bin:$PATH"
-
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-
-alias notes=note
-note(){
-    NOTES="${HOME}/Documents/work/notes";
-    if [[ -d "${NOTES}" ]]; then
-        cd ${NOTES}; vim
-    else
-        mkdir ${NOTES};
-        cd ${NOTES}; vim
-    fi
-}
-
-alias repos=repo
-repo(){
-    REPO="${HOME}/Documents/work/repos";
-    if [[ -d "${REPO}" ]]; then
-        cd ${REPO}; 
-    else
-        mkdir ${REPO};
-        cd ${REPO}
-    fi
-}
-
-# alias 
-. ~/.work.alias
-. ~/.servers_glb.alias
-. ~/.personal.alias
+export PATH="${HOME}/Documents/estudos/python/envs/bin:$HOME/node/bin:$HOME/gems/bin:${HOME}/pycharm/bin:${HOME}/go/bin:$PATH"
 
 # If not running interactively, don't do anything
 case $- in
@@ -110,7 +79,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

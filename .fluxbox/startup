@@ -14,7 +14,7 @@ xmodmap "/home/${USER}/.Xmodmap"
 fbsetbg -a -r /home/${USER}/Pictures/wallpapers/ & 
 xscreensaver &
 google-chrome &
-terminator &
+terminator --command="tmux new -s startupSession" &
 xautolock -time 1 -locker "xtrlock" -secure &
 wicd &
 wicd-client &

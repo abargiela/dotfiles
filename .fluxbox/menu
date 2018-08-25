@@ -11,8 +11,10 @@
 	[exec] (Thunar) {thunar ~/} </usr/share/pixmaps/Thunar/Thunar-about-logo.png>
 	[exec] (Terminator) {terminator} </usr/share/pixmaps/terminator.png>
     [exec] (Google Chrome) {/opt/google/chrome/google-chrome} </opt/google/chrome/product_logo_32.xpm>
+    [exec] (Enpass) {/opt/Enpass/bin/runenpass.sh}
+    [exec] (Code) {/usr/bin/code}                                                                                                                                                                                                                                                                               
 
-   [submenu] (Applications) {}
+    [submenu] (Applications) {}
       [submenu] (Accessibility) {}
          [exec] (Xmag) {xmag} <>
       [end]
