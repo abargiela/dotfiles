@@ -18,6 +18,7 @@ terminator --command="tmux new -s startupSession" &
 xautolock -time 1 -locker "xtrlock" -secure &
 wicd &
 wicd-client &
+pasystray &
 xrandr & 
 /home/${USER}/Enpass/runenpass.sh &
 # And last but not least we start fluxbox.

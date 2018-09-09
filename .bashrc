@@ -1,6 +1,8 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+setxkbmap -model pc105 -layout br -variant abnt2
+
 xmodmap ~/.Xmodmap
 export GEM_HOME="$HOME/gems"
 export GOPATH="/usr/bin/"
