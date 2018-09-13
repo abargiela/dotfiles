@@ -17,6 +17,7 @@
     [exec] (JMeter) {~/jmeter/bin/jmeter} <~/jmeter/docs/images/jmeter.png>
     [exec] (ARandR) (/usr/bin/arandr)
 
+
     [submenu] (Applications) {}
       [submenu] (Accessibility) {}
          [exec] (Xmag) {xmag} <>
