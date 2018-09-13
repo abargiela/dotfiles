@@ -11,9 +11,11 @@
 	[exec] (Thunar) {thunar ~/} </usr/share/pixmaps/Thunar/Thunar-about-logo.png>
 	[exec] (Terminator) {terminator} </usr/share/pixmaps/terminator.png>
     [exec] (Google Chrome) {/opt/google/chrome/google-chrome} </opt/google/chrome/product_logo_32.xpm>
-    [exec] (Enpass) {/opt/Enpass/bin/runenpass.sh}
-    [exec] (Code) {/usr/bin/code}
-    [exec] (PlayOnLinux) {playonlinux} </usr/share/playonlinux/resources/images/setups/default/playonlinux.jpg>                                                                                                                                                                                                                                                                               
+    [exec] (Enpass) {/home/abargiela/Enpass/runenpass.sh} </home/${USER}/Enpass/enpass.png>
+    [exec] (Code) {/usr/bin/code} </usr/share/pixmaps/code.png>
+    [exec] (PlayOnLinux) {playonlinux} </usr/share/playonlinux/resources/images/setups/default/playonlinux.jpg>
+    [exec] (JMeter) {~/jmeter/bin/jmeter} <~/jmeter/docs/images/jmeter.png>
+    [exec] (ARandR) (/usr/bin/arandr)
 
     [submenu] (Applications) {}
       [submenu] (Accessibility) {}
