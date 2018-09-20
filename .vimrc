@@ -8,7 +8,9 @@ set colorcolumn=79
 
 set encoding=utf-8
 set term=screen-256color
-"set cursorline
+
+set cursorline
+set paste
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
@@ -65,9 +67,21 @@ let g:spacehi_spacecolor="ctermfg=Black ctermbg=Yellow guifg=Blue guibg=Yellow"
 let g:spacehi_nbspcolor="ctermfg=White ctermbg=Red guifg=White guibg=Red"
 "
 "
-Plugin 'avakhov/vim-yaml'
 
-Plugin 'chase/vim-ansible-yaml'
+Plugin 'hashivim/vim-terraform'
+let g:terraform_align=1
+
+Plugin 'juliosueiras/vim-terraform-completion'
+
+
+Plugin 'avakhov/vim-yaml'
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/bundle/vim-yaml/after/ftplugin/yaml.vim
+
+
+"Plugin 'chase/vim-ansible-yaml'
+"Plugin 'pearofducks/ansible-vim'
+
+
 "
 Plugin 'spf13/vim-autoclose'
 
@@ -84,6 +98,10 @@ let g:indent_guides_auto_colors = 0
 "
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
+map <C-n> :NERDTreeToggle<CR>
+
+map <C-n> :NERDTreeToggle<CR>
+
 Plugin 'pld-linux/vim-syntax-vcl'
 
 Plugin 'scrooloose/syntastic'
@@ -95,6 +113,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_perl_interpreter = ['yamllint']
+
 "
 
 ""

@@ -5,7 +5,7 @@ setxkbmap -model pc105 -layout br -variant abnt2
 
 xmodmap ~/.Xmodmap
 export GEM_HOME="$HOME/gems"
-export GOPATH="/usr/bin/"
+export GOPATH="${HOME}/go/"
 export INPUTRC="~/.inputrc"
 export PATH="${HOME}/Documents/estudos/python/envs/bin:$HOME/node/bin:$HOME/gems/bin:${HOME}/pycharm/bin:${HOME}/go/bin:$PATH"
 
