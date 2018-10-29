@@ -1,9 +1,8 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-setxkbmap -model pc105 -layout br -variant abnt2
+setxkbmap -model abnt2 -layout br -variant ,abnt2 
 
-xmodmap ~/.Xmodmap
 export GEM_HOME="$HOME/gems"
 export GOPATH="${HOME}/go/"
 export INPUTRC="~/.inputrc"
@@ -34,7 +33,8 @@ shopt -s checkwinsize
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
-if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
+#if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
+TERM=xterm-256color
 
 color_prompt=yes
 #if [ -n "$force_color_prompt" ]; then
@@ -49,7 +49,7 @@ color_prompt=yes
 #fi
 #if [ "$TERM" == "xterm" ]; then
 #    # No it isn't, it's gnome-terminal
-export TERM=xterm-256color
+#export TERM=xterm-256color
 #fi
 
     if [ "$color_prompt" = yes ]; then

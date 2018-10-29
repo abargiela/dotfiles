@@ -3,23 +3,27 @@
 runtime! debian.vim
 set t_Co=256
 set background=dark
+let g:solarized_termcolors=256
+set term=xterm-256color
+
 syntax enable
+
 set colorcolumn=79  
-
 set encoding=utf-8
-set term=screen-256color
 
-set cursorline
+"set cursorline
 set paste
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
-let python_highlight_all=1
+"let python_highlight_all=1
 
 " grep to list dark schemes
 "!egrep 'background=dark' ~/.vim/colors/*| awk -F \/ '{print $6}'| awk -F . '{print $1}' | tr "\n" " "
 
-colorscheme gruvbox 
+
+colorscheme leo
+"colorscheme gruvbox 
 "colorscheme triplejelly
 "colorscheme wombat256
 "colorscheme twilight256
@@ -39,6 +43,30 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 "
+
+"
+Plugin 'kien/rainbow_parentheses.vim'
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+"
+
+
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme='simple'
 " Enable the list of buffers
@@ -88,11 +116,11 @@ Plugin 'spf13/vim-autoclose'
 "Plugin 'townk/vim-autoclose'
 Plugin 'danro/rename.vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'vim-scripts/indentpython.vim'
+"Plugin 'vim-scripts/indentpython.vim'
 "
-Plugin 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 0
+"Plugin 'nathanaelkane/vim-indent-guides'
+"let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_auto_colors = 0
 "hi IndentGuidesOdd  ctermbg=black
 "hi IndentGuidesEven ctermbg=darkgrey
 "

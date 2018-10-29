@@ -14,14 +14,17 @@ xmodmap "/home/${USER}/.Xmodmap"
 fbsetbg -a -r /home/${USER}/Pictures/wallpapers/ & 
 xscreensaver &
 google-chrome &
+nm-applet & 
+xfce4-power-manager &
 terminator --command="tmux new -s startupSession" &
 xautolock -time 1 -locker "xtrlock" -secure &
-wicd &
-wicd-client &
-pasystray &
+#wicd &
+#wicd-client &
+pasystray & 
+gnome-control-center &
 xrandr & 
 blueman-applet &
-/home/${USER}/Enpass/runenpass.sh &
+/opt/Enpass/bin/runenpass.sh &
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
 exec fluxbox
