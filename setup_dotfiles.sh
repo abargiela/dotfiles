@@ -1,7 +1,7 @@
 #!/bin/bash
 REPO_PATH="${HOME}/Documents/dotfiles/"
 
-FILES=".bashrc .vimrc .tmux.conf .fluxbox .i3"
+FILES=".bashrc .vimrc .tmux.conf .fluxbox .i3 .Xresources"
 
 for i in ${FILES}; do
     if [[ -h ${HOME}/${i} ]];then

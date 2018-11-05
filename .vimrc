@@ -80,6 +80,9 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 Plugin 'godlygeek/tabular'
 Plugin 'shougo/vimshell.vim'
 
+Plugin 'lilydjwg/colorizer'
+
+
 
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
