@@ -22,8 +22,8 @@ set paste
 "!egrep 'background=dark' ~/.vim/colors/*| awk -F \/ '{print $6}'| awk -F . '{print $1}' | tr "\n" " "
 
 
-colorscheme leo
-"colorscheme gruvbox 
+"colorscheme leo
+colorscheme gruvbox 
 "colorscheme triplejelly
 "colorscheme wombat256
 "colorscheme twilight256

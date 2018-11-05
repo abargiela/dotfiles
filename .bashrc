@@ -3,6 +3,8 @@
 # for examples
 setxkbmap -model abnt2 -layout br -variant ,abnt2 
 
+export EDITOR=vim
+
 export GEM_HOME="$HOME/gems"
 export GOPATH="${HOME}/go/"
 export INPUTRC="~/.inputrc"
