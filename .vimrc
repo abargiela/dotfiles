@@ -81,6 +81,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'shougo/vimshell.vim'
 
 Plugin 'lilydjwg/colorizer'
+Plugin 'txt.vim'
+au BufRead,BufNewFile *  setfiletype txt
+
 
 
 
