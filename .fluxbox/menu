@@ -16,7 +16,8 @@
     [exec] (PlayOnLinux) {playonlinux} </usr/share/playonlinux/resources/images/setups/default/playonlinux.jpg>
     [exec] (Remmina) {remmina}
     [exec] (JMeter) {~/jmeter/bin/jmeter} <~/jmeter/docs/images/jmeter.png>
-    [exec] (ARandR) (/usr/bin/arandr)
+    [exec] (ARandR) {/usr/bin/arandr}
+    [exec] (DBeaver) {/usr/bin/dbeaver} </usr/share/dbeaver/dbeaver.png>
 
 
     [submenu] (Applications) {}

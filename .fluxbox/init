@@ -45,14 +45,14 @@ session.screen0.rowPlacementDirection:	LeftToRight
 session.screen0.windowMenu:	/home/abargiela/.fluxbox/windowmenu
 session.screen0.autoRaise:	true
 session.screen0.defaultDeco:	NORMAL
-session.screen0.workspaces:	4
+session.screen0.workspaces:	2
 session.screen0.clickRaises:	true
 session.screen0.maxIgnoreIncrement:	true
 session.screen0.fullMaximization:	false
 session.screen0.maxDisableMove:	false
 session.screen0.maxDisableResize:	false
 session.screen0.focusModel:	ClickFocus
-session.screen0.workspaceNames:	W1,W2,W3,W4,
+session.screen0.workspaceNames:	w1,w2
 session.screen0.tabFocusModel:	ClickToTabFocus
 session.screen0.showwindowposition:	false
 session.screen0.workspacewarping:	true
