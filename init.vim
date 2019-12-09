@@ -5,7 +5,8 @@ set cursorline
 set number
 set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
 hi SpecialKey ctermfg=grey guifg=grey70
-set completeopt=longest,menuone
+"set completeopt=longest,menuone
+set updatetime=300
 
 
 
@@ -52,32 +53,32 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug '~/my-prototype-plugin'
 
 "
-"Plug 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic'
 "
 "" Syntastic Config
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 "
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 "
 "" (Optional)Remove Info(Preview) window
-"set completeopt-=preview
+set completeopt-=preview
 "
 "" (Optional)Hide Info(Preview) window after completions
-"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "
 "" (Optional) Enable terraform plan to be include in filter
-"let g:syntastic_terraform_tffilter_plan = 1
+let g:syntastic_terraform_tffilter_plan = 1
 "" (Optional) Default: 0, enable(1)/disable(0) plugin's keymapping
-"let g:terraform_completion_keys = 1
+let g:terraform_completion_keys = 1
 "
 "" (Optional) Default: 1, enable(1)/disable(0) terraform module registry completion
-"let g:terraform_registry_module_completion = 0
+let g:terraform_registry_module_completion = 0
 ""
 
 "" deoplete
@@ -123,9 +124,9 @@ Plug '~/my-prototype-plugin'
 "\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 "
 "" For conceal markers.
-"if has('conceal')
-"  set conceallevel=2 concealcursor=niv
-"endif
+""if has('conceal')
+""  set conceallevel=2 concealcursor=niv
+""endif
 ""
 
 Plug 'hashivim/vim-terraform'
@@ -294,7 +295,6 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " end coc config
-
 
 
 " Initialize plugin system
