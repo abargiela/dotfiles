@@ -9,6 +9,7 @@ function install_brew_packages() {
         'zsh' \
         'ansible' \
         'neovim' \
+		'tfenv' \
         'python3' \
         'git' \
         'tmux'
