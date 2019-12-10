@@ -62,7 +62,15 @@ function zsh_load_config(){
 
 
 function main() {
-
+    install_brew
+    install_brew_packages
+    install_pip_packages
+    install_neovim_plug
+    create_virtualenv
+    dot_files_repo_download
+    dot_files_repo_install
+    neovim_install_plugins
+    zsh_load_config
 }
 
 
