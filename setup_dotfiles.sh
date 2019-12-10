@@ -37,7 +37,7 @@ if [[ -f ${VSCODE_PATH}/${VSCODE_CONFIG_FILE} ]]; then
     ln -s ${REPO_PATH}/${VSCODE_CONFIG_FILE} ${VSCODE_PATH}
 fi
 
-# VSCode config
+# iTerm config
 ITERM_STARTUP_CONFIG_FILE="check-iterm2-startup.sh"
 ITERM_STARTUP_PATH="$HOME/Documents/"
 if [[ -h ${ITERM_STARTUP_PATH}/${ITERM_STARTUP_CONFIG_FILE} ]];then
