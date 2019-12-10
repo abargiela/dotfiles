@@ -296,6 +296,18 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " end coc config
 
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+augroup LspEFM
+  au!
+  autocmd User lsp_setup call lsp#register_server({
+      \ 'name': 'efm-langserver',
+      \ 'cmd': {server_info->['efm-langserver', '-c=~/.config/efm-langserver/config.yaml']},
+      \ 'whitelist': ['vim', 'eruby', 'markdown', 'yaml'],
+      \ })
+augroup END
+"
+
 
 " Initialize plugin system
 call plug#end()

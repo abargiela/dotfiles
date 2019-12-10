@@ -1,0 +1,19 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontFamily": "GohuFont",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.cwd": "/Users/alexandre.bargiela/Documents/",
+    "terminal.integrated.shellArgs.osx":["/Users/alexandre.bargiela/Documents/check-iterm2-startup.sh"],
+    "terminal.explorerKind": "external",
+    "terminal.integrated.fontFamily": "GohuFont",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.shell.osx": "/bin/bash",
+    "workbench.colorTheme": "One Dark Pro",
+    "python.pythonPath": "/Users/alexandre.bargiela/Documents/venv_py3/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+}
+
