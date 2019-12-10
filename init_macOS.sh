@@ -44,35 +44,39 @@ function create_virtualenv(){
     virtualenv -p python3 ~/Documents/venv_py3
 }
 
-function dot_files_repo_download(){
+function download_dot_files_repo(){
     # If you're not me, comment git and use https :P 
     #git clone https://github.com/abargiela/dotfiles.git ${HOME}/Documents/dotfiles/
     git clone git@github.com:abargiela/dotfiles.git ${HOME}/Documents/dotfiles/
 }
 
-function dot_files_repo_install(){
+function add_dot_files_repo(){
     bash ${HOME}/Documents/dotfiles/setup_dotfiles.sh
 }
-function neovim_install_plugins(){
+
+function install_neovim_plugins(){
     nvim +'PlugInstall --sync' +'PlugUpdate' +qa
 }
-function zsh_load_config(){
+
+function load_zsh_config(){
     source ~/.zshrc
 }
 
+function install_powerlevel10k(){
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+}
 
 function main() {
     install_brew
     install_brew_packages
     install_pip_packages
     install_neovim_plug
+    install_neovim_plugins
     create_virtualenv
-    dot_files_repo_download
-    dot_files_repo_install
-    neovim_install_plugins
-    zsh_load_config
+    download_dot_files_repo
+    add_dot_files_repo
+    load_zsh_config
+    install_powerlevel10k
 }
-
-
 
 main
