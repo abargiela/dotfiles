@@ -23,7 +23,7 @@ if [[ -h ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE} ]];then
 fi 
 if [[ -f ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE} ]]; then
     mv  ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE} ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
-    ln -s ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ~/.config/nvim/
+    ln -s ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ${NEOVIM_PATH}
 fi
 
 # VSCode config
@@ -34,5 +34,16 @@ if [[ -h ${VSCODE_PATH}/${VSCODE_CONFIG_FILE} ]];then
 fi
 if [[ -f ${VSCODE_PATH}/${VSCODE_CONFIG_FILE} ]]; then
     mv  ${VSCODE_PATH}/${VSCODE_CONFIG_FILE} ${VSCODE_PATH}/${VSCODE_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
-    ln -s ${REPO_PATH}/${VSCODE_CONFIG_FILE} ~/.config/nvim/
+    ln -s ${REPO_PATH}/${VSCODE_CONFIG_FILE} ${VSCODE_PATH}
+fi
+
+# VSCode config
+ITERM_STARTUP_CONFIG_FILE="check-iterm2-startup.sh"
+ITERM_STARTUP_PATH="$HOME/Documents/"
+if [[ -h ${ITERM_STARTUP_PATH}/${ITERM_STARTUP_CONFIG_FILE} ]];then
+    unlink ${ITERM_STARTUP_PATH}/${ITERM_STARTUP_CONFIG_FILE}
+fi
+if [[ -f ${ITERM_STARTUP_PATH}/${ITERM_STARTUP_CONFIG_FILE} ]]; then
+    mv  ${ITERM_STARTUP_PATH}/${ITERM_STARTUP_CONFIG_FILE} ${ITERM_STARTUP_PATH}/${ITERM_STARTUP_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
+    ln -s ${REPO_PATH}/${ITERM_STARTUP_CONFIG_FILE} ${ITERM_STARTUP_PATH}
 fi
