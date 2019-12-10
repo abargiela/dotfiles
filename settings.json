@@ -10,7 +10,7 @@
     "terminal.integrated.fontFamily": "GohuFont",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.shell.osx": "/bin/bash",
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Dracula",
     "python.pythonPath": "/Users/alexandre.bargiela/Documents/venv_py3/bin/python",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
