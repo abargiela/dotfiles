@@ -70,9 +70,9 @@ function main() {
     install_brew
     install_brew_packages
     install_pip_packages
+    create_virtualenv
     install_neovim_plug
     install_neovim_plugins
-    create_virtualenv
     download_dot_files_repo
     add_dot_files_repo
     load_zsh_config
