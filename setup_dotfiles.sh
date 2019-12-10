@@ -18,6 +18,18 @@ for i in ${FILES}; do
 done
 
 #NeoVim config
-ln -s ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ~/.config/nvim/
+if [[ -h ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ]];then
+    unlink ${REPO_PATH}/${NEOVIM_CONFIG_FILE}
+fi 
+if [[ -f ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ]]; then
+    mv  ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ${REPO_PATH}/${NEOVIM_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
+    ln -s ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ~/.config/nvim/
+fi
 # VSCode config
-ln -s ${REPO_PATH}/${VSCODE_CONFIG_FILE} ~/Library/Application\ \Support/Code/User/
+if [[ -h ${REPO_PATH}/${VSCODE_CONFIG_FILE} ]];then
+    unlink ${REPO_PATH}/${VSCODE_CONFIG_FILE}
+fi
+if [[ -f ${REPO_PATH}/${VSCODE_CONFIG_FILE} ]]; then
+    mv  ${REPO_PATH}/${VSCODE_CONFIG_FILE} ${REPO_PATH}/${VSCODE_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
+    ln -s ${REPO_PATH}/${VSCODE_CONFIG_FILE} ~/.config/nvim/
+fi
