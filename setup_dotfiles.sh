@@ -17,20 +17,22 @@ done
 
 #NeoVim config
 NEOVIM_CONFIG_FILE="init.vim"
-if [[ -h ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ]];then
-    unlink ${REPO_PATH}/${NEOVIM_CONFIG_FILE}
+NEOVIM_PATH="${HOME}/.config/nvim/"
+if [[ -h ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE} ]];then
+    unlink ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE}
 fi 
-if [[ -f ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ]]; then
-    mv  ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ${REPO_PATH}/${NEOVIM_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
+if [[ -f ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE} ]]; then
+    mv  ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE} ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
     ln -s ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ~/.config/nvim/
 fi
 
 # VSCode config
 VSCODE_CONFIG_FILE="settings.json"
-if [[ -h ${REPO_PATH}/${VSCODE_CONFIG_FILE} ]];then
-    unlink ${REPO_PATH}/${VSCODE_CONFIG_FILE}
+VSCODE_PATH="$HOME/Library/Application Support/Code/User"
+if [[ -h ${VSCODE_PATH}/${VSCODE_CONFIG_FILE} ]];then
+    unlink ${VSCODE_PATH}/${VSCODE_CONFIG_FILE}
 fi
-if [[ -f ${REPO_PATH}/${VSCODE_CONFIG_FILE} ]]; then
-    mv  ${REPO_PATH}/${VSCODE_CONFIG_FILE} ${REPO_PATH}/${VSCODE_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
+if [[ -f ${VSCODE_PATH}/${VSCODE_CONFIG_FILE} ]]; then
+    mv  ${VSCODE_PATH}/${VSCODE_CONFIG_FILE} ${VSCODE_PATH}/${VSCODE_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
     ln -s ${REPO_PATH}/${VSCODE_CONFIG_FILE} ~/.config/nvim/
 fi
