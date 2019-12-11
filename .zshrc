@@ -7,6 +7,26 @@ source ~/Documents/venv_py3/bin/activate
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/alexandre.bargiela/.oh-my-zsh"
 
+
+
+
+function tfenv_switch(){
+    TF_FILE_TEST=$(
+        grep required_version ${PWD}/*.tf | \
+        grep -v \# | \
+        awk  '{print $5}' | \
+        awk -F \" '{print $1}' | \
+        tail -n1
+    )
+    
+    if [[ "${TF_FILE_TEST}" == "0.12" ]];then  
+        TF_FILE_TEST="0.12.0"
+    fi
+
+    tfenv install ${TF_FILE_TEST} && \
+    tfenv use ${TF_FILE_TEST}
+}
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
