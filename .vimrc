@@ -14,8 +14,6 @@ colorscheme gruvbox-material
 
 set backspace=indent,eol,start
 set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab fileformat=unix hlsearch
-au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
-autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
 
 " Vundle start
 set nocompatible
@@ -37,6 +35,9 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 Plugin 'w0rp/ale'
 Plugin 'neoclide/coc.nvim'
+"CocInstall coc-yaml
+"CocInstall coc-python
+"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
