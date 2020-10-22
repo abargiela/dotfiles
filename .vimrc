@@ -1,3 +1,4 @@
+❯ cat ~/.vimrc
 " This line should not be removed as it ensures that various options are
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
@@ -12,9 +13,10 @@ set number
 
 colorscheme gruvbox-material
 
-set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 expandtab fileformat=unix hlsearch
+set backspace=indent,eol,start
+set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab fileformat=unix hlsearch
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
 
 " Vundle start
 set nocompatible
@@ -34,15 +36,6 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
-Plugin 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_python_checkers = ['pylint']
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
