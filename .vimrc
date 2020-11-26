@@ -46,8 +46,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_folding_disabled = 1
-Plugin '907th/vim-auto-save'
-let g:auto_save = 1  " enable AutoSave on Vim startup
 
 "CocInstall coc-yaml
 "CocInstall coc-python
