@@ -33,8 +33,22 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
+Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'w0rp/ale'
 Plugin 'neoclide/coc.nvim'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=Grey27   ctermbg=238
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=Grey19   ctermbg=236
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_folding_disabled = 1
+Plugin '907th/vim-auto-save'
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
 "CocInstall coc-yaml
 "CocInstall coc-python
 "
