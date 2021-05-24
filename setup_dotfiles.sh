@@ -6,7 +6,7 @@ FILES=".bashrc .vimrc .tmux.conf .fluxbox .i3 .Xresources .zshrc"
 for i in ${FILES}; do
     if [[ -h ${HOME}/${i} ]];then
         unlink ${HOME}/${i}
-    fi 
+    fi
 
     if [[ -f ${HOME}/${i} ]]; then
         mv  ${HOME}/${i} ${HOME}/${i}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
@@ -15,15 +15,26 @@ for i in ${FILES}; do
     ln -s ${REPO_PATH}/${i} ${HOME}/
 done
 
-#NeoVim config
+# NeoVim config
 NEOVIM_CONFIG_FILE="init.vim"
 NEOVIM_PATH="${HOME}/.config/nvim/"
 if [[ -h ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE} ]];then
     unlink ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE}
-fi 
+fi
 if [[ -f ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE} ]]; then
     mv  ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE} ${NEOVIM_PATH}/${NEOVIM_CONFIG_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
     ln -s ${REPO_PATH}/${NEOVIM_CONFIG_FILE} ${NEOVIM_PATH}
+fi
+
+# Coc config
+COC_EXTENSIONS_FILE="package.json"
+COC_PATH="${HOME}/.config/coc/extensions/"
+if [[ -h ${COC_PATH}/${COC_EXTENSIONS_FILE} ]];then
+    unlink ${COC_PATH}/${COC_EXTENSIONS_FILE}
+fi
+if [[ -f ${COC_PATH}/${COC_EXTENSIONS_FILE} ]]; then
+    mv  ${COC_PATH}/${COC_EXTENSIONS_FILE} ${COC_PATH}/${COC_EXTENSIONS_FILE}.bkp-$(date '+%Y-%m-%d_%H-%M-%S')
+    ln -s ${REPO_PATH}/${COC_EXTENSIONS_FILE} ${COC_PATH}
 fi
 
 # VSCode config
