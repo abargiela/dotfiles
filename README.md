@@ -1,7 +1,6 @@
 # Dotfiles
 
-
-A few personal config files, that helps me to configure my desktop, hope it helps you! 
+A few personal config files, that helps me to configure my desktop, hope it helps you!
 
 # Usage
 If you use `mac` use: `init_macOS.sh` script.
