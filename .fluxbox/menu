@@ -7,7 +7,7 @@
 [begin] (Fluxbox)
 
 # Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
-	[exec] (screengrab) {screengrab -r} </usr/share/icons/hicolor/32x32/apps/screengrab.png>
+        [exec] (flameshot) {flameshot gui} </usr/share/icons/hicolor/48x48/apps/flameshot.png>
 	[exec] (Thunar) {thunar ~/} </usr/share/pixmaps/Thunar/Thunar-about-logo.png>
 	#[exec] (Terminator) {terminator} </usr/share/pixmaps/terminator.png>
 	[exec] (XTerm) {xterm -fa  '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf' -fs 9 -fg green -e "~/scripts/tmux.sh"} </usr/share/pixmaps/xterm-color_32x32.xpm>
