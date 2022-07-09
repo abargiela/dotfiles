@@ -1,6 +1,46 @@
 """ Vim-Plug
-call plug#begin()
-Plug 'sainnhe/gruvbox-material'
+
+function! InitializeCoc()
+  call coc#util#install()
+  call coc#util#install_extensions([
+  \ 'coc-ultisnips',
+  \ 'coc-json',
+  \ 'coc-tsserver',
+  \ 'coc-yaml',
+  \ 'coc-docker',
+  \ 'coc-go',
+  \ 'coc-eslint',
+  \ 'coc-highlight',
+  \ 'coc-json',
+  \ 'coc-lists',
+  \ 'coc-markdownlint',
+  \ 'coc-prettier',
+  \ 'coc-pyright',
+  \ 'coc-sh',
+  \ 'coc-snippets',
+  \ 'coc-spell-checker',
+  \ 'coc-tabnine',
+  \ 'coc-tsserver',
+  \ 'coc-vimlsp',
+  \ 'coc-yaml',
+  \ 'coc-go-data',
+  \ 'coc-tabnine-data'
+  \ ])
+endfunction
+
+call plug#begin("~/.config/nvim/plugged")
+"Plug 'sonph/onehalf', {'rtp': 'vim/'}
+"Plug 'ayu-theme/ayu-vim'
+"Plug 'sainnhe/gruvbox-material'
+"Plug 'joshdick/onedark.vim'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+Plug 'morhetz/gruvbox'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
+Plug 'endel/vim-github-colorscheme'
+Plug 'navarasu/onedark.nvim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'tpope/vim-surround'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -9,24 +49,39 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'ryanoasis/vim-devicons'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'scrooloose/nerdtree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> InitializeCoc() } }
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 Plug 'Yggdroot/indentLine'
 Plug 'raimondi/delimitmate'
 Plug 'kien/ctrlp.vim'
 Plug 'hashivim/vim-terraform'
+" Telescope
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope.nvim'
+" Inside the Vim-Plug block on your .vimrc
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'pearofducks/ansible-vim'
 call plug#end()
+
+
+au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
+au BufRead,BufNewFile */playbooks/*.yaml set filetype=yaml.ansible
+
+"set completeopt=menu,menuone,noselect
 
 " auto remove end of line whitespaces
 augroup vimrc
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 augroup END
 
+
+
 "Plug 'hashivim/vim-terraform
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
 
 " indentLine
-let g:indentLine_setConceal = 0
+"let g:indentLine_setConceal = 0
 let g:indentLine_enabled = 1
 let g:indentLine_char = '┊'
 
@@ -43,13 +98,27 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif
 
-runtime! debian.vim
+"runtime! debian.vim
 set colorcolumn=80
-set background=dark
-syntax on
 set hidden
 set spell spelllang=en_us
 
+" cursor
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
+"
+
+"set t_Co=256
+syntax enable
+set background=light
+
+"colorscheme molokai
+"colorscheme dracula
+
+colorscheme github
 "Resize splitted panes vim
 nnoremap <C-Up> <C-w>-
 nnoremap <C-Down> <C-w>+
@@ -67,11 +136,12 @@ set encoding=utf-8
 set number
 set title
 
+"set foldmethod=expr
+
 "let mapleader=","
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
 
-colorscheme gruvbox-material
 
 " Coc config
 "
@@ -273,3 +343,20 @@ nnoremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>l
 " visual mode: escape to normal and save
 vnoremap <c-s> <Esc>:w<CR>
+
+" COPY AND PASTE
+" Paste system clipboard with Ctrl + v
+inoremap <C-v> <ESC>"+gPi
+"nnoremap <C-v> "+gP<ESC>
+vnoremap <C-v> d"+gP<ESC>
+cnoremap <C-v> <C-r>+
+
+" Cut to system clipboard with Ctrl + x
+vnoremap <C-x> "+d
+"nnoremap <C-x> "+dd
+inoremap <C-x> <ESC>"+ddi
+
+" Copy to system clipboard with Ctr + c
+vnoremap <C-c> "+y
+nnoremap <C-c> "+yy
+inoremap <C-c> <ESC>"+yyi
